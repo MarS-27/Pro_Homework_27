@@ -1,0 +1,85 @@
+body {
+    padding: 0 10px;
+    background: rgba(142, 219, 248, 0.8);
+    font-family: Arial, Helvetica, sans-serif;
+    color: #373434;
+	font-size: 14px;
+}
+
+.title {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.students__table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.students__table-head {
+    text-align: center;
+    font-weight: 700;
+}
+
+.students__table-rows {
+    height: 40px;
+}
+
+.student__name {
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button {
+	width: 160px;
+    height: 30px;
+    border-radius: 15px;
+    background: rgba(229, 154, 154, 0.8);
+    border: 2px solid #5b5858;
+    cursor: pointer;
+
+    &:hover {
+        color: rgb(255, 255, 255);
+        box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.611);
+        transition: 8ms;
+    }
+
+    &:active {
+        background: rgb(147, 33, 33);
+        transition: 8ms;
+    }
+}
+
+.delete-btn {
+    width: 60px;
+}
+
+.students__marks,
+.add__form-input {
+    background: rgb(233, 231, 231);
+    display: block;
+    margin: 0 auto;
+    width: 80px;
+    text-align: center;
+    height: 30px;
+    border-radius: 15px;
+    padding: 0 10px;
+    border: 2px solid #5b5858;
+
+    &:focus {
+        background-color: #fff;
+        border-color: #bdbdbd;
+        outline: 0;
+        box-shadow: 0 0 0 0.2rem rgba(234, 101, 101, 0.25);
+    }
+}
+
+.add__form-input {
+    display: inline;
+    width: 260px;
+}
