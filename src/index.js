@@ -1,6 +1,7 @@
 const API = "https://5dd3d5ba8b5e080014dc4bfa.mockapi.io";
 
 const addForm = document.getElementById("addStudentForm");
+const loader = document.getElementById("loader");
 
 const controller = async (path, method = "GET", body) => {
     let URL = `${API}/${path}`;
@@ -15,8 +16,11 @@ const controller = async (path, method = "GET", body) => {
     if (body) params.body = JSON.stringify(body);
 
     let request = await fetch(URL, params);
+    
+    loader.classList.add("visible");
 
     if (request.ok) {
+        loader.classList.remove("visible");
         let responce = await request.json();
         return responce; 
     } else {
@@ -35,6 +39,7 @@ async function studentsList() {
 
 addForm.addEventListener("submit", async e => {
     e.preventDefault();
+    loader.classList.add("visible");
 
     const studentName = document.getElementById("studentName").value.trim();
 
@@ -96,7 +101,8 @@ class Student {
         const deleteBtn = document.getElementById(`delete-${this.id}`);
 
         deleteBtn.addEventListener("click", async () => {
-            
+            loader.classList.add("visible");
+
             const studentInfo = document.getElementById(`${this.id}`);
 
             const deleteStudent = await controller(`students/${this.id}`, "DELETE");

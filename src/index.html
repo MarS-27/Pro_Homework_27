@@ -10,6 +10,15 @@
 </head>
 <body>
     <h1 class="title">Students homework list</h1>
+    <div class="loader" id="loader">
+        <div class="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    
     <table class="students__table">
         <thead class="students__table-head">
             <tr class="students__table-rows">
@@ -26,7 +35,9 @@
                 <th>Homework №10</th>
             </tr>
         </thead>
-        <tbody id="tbody"></tbody>
+        <tbody id="tbody">
+            
+        </tbody>
     </table>
     <form id="addStudentForm">
 		<input class="add__form-input" type="text" placeholder="Enter student name" id="studentName">
