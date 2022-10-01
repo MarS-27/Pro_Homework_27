@@ -56,6 +56,7 @@ addForm.addEventListener("submit", async e => {
             addForm.reset();
         }
     } else {
+        loader.classList.remove("visible");
         alert("Please, enter student name!");
     }
 })
